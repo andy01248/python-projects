@@ -63,5 +63,17 @@ print(p2.master.height)
 p2.master.weight
 
 
+class food:
+    def __init__(self,type,weight,cost,owner):
+        self.type1=type
+        self.weight=weight
+        self.cost=cost
+        self.owner=owner
+    def showtype(self):
+        print('the food type is'+self.type1)
+        print('the owner weight is', self.owner.weight)
+
+dogfood = food('dog food',10,10,p2)
+dogfood.showtype()
 
 
