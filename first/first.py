@@ -17,7 +17,6 @@ while index<len(lista):
     if lista[index-1] == 2:
         break
 print(d)
-
 lista.insert(2,10)
 print(lista)
 
