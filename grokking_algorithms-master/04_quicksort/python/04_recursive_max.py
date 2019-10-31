@@ -28,22 +28,22 @@ def re_findmax(list):
       return list[0]
 print(re_findmax([1,2,3,4,5,8,2,1]))
 
-def re_binary_search(list,value):
-  high=len(list)-1
-  low=0
+def re_binary_search(list,value,high,low):
   mid=(high+low)//2
-
-  if len(list)==1:  
-    return high if list[0]==value else None
-  else:
-    if list[mid]>value:
+  if high>=low:
+    if list[mid]==value:
+      return mid 
+    elif list[mid]>value:
       high=mid-1
-      return re_binary_search(list[0:high+1],value)
-    elif list[mid]<value:
+      return re_binary_search(list,value,high,low)
+    else :
       low=mid+1
-      return re_binary_search(list[low:],value)
+      return re_binary_search(list,value,high,low)
+  else:
+    return None
 
-print(re_binary_search([1,2,3,4,5,8,9,10],11))
+list=[1,2,3,4,5,8,9,10]
+high=len(list)-1
+low=0
+print(re_binary_search(list,2,high,low))
 
-array=[1,2,3,4,5]
-print(array[0:2])
