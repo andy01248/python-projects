@@ -11,4 +11,41 @@ def quicksort(array):
     greater = [i for i in array[1:] if i > pivot]
     return quicksort(less) + [pivot] + quicksort(greater)
 
-print quicksort([10, 5, 2, 3])
+print (quicksort([10, 5, 2, 3]))
+
+
+def qsort(list):
+  small=[]
+  large=[]
+  if len(list)<2:
+    return list
+  else:
+    pivot=list[0]
+    for i in list[1:]:
+      if i<pivot:
+        small=small+[i]
+      else:
+        large.append(i)
+    a=qsort(small)
+    b=qsort(large)
+    return a + [pivot] + b
+  
+def qsort_easy(list):
+  if len(list)<2:
+    return list
+  else:
+    pivot=list[0]
+    small=[ i for i in list[1:] if i<pivot]
+    large=[ i for i in list[1:] if i>=pivot]
+
+    return qsort_easy(small) + [pivot] + qsort_easy(large)
+  
+print(qsort([7 ,8 ,2 ,3,4]))
+print(qsort_easy([7 ,8 ,2 ,3,4]))
+
+
+a=[1,2,3,4,5,6,7,8]
+b= 2 if a[0]<1 else 3
+c= [ i for i in a[2:] if i <5]
+print(b)
+print(c)
