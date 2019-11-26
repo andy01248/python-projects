@@ -27,7 +27,7 @@ print (final_stations)
 
 print(set([1,1,6,3,2,2,2,3,3,4,3,4,4,5,3,3]))
 print(set([6,6,4,4,2,2,3,3,1,1,2]))
-print(set([1,2,3,4]-))
+print(set([1,2,3,4]))
 print(set(['a','a','b','b','c','c','d','d','f','f','e','e']))
 
 
@@ -60,4 +60,3 @@ print(chosen_station)
 a=[1,2,3]
 b=[2,3,4]
 print(a+b)
-diff(a,b)
